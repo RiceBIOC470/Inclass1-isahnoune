@@ -1,4 +1,6 @@
-% InClass1: some simple excerises to get started with MATLAB. Please complete by
+% AW: Looks good in general. 0.99/1. Please make sure to see my comments below. 
+
+%InClass1: some simple excerises to get started with MATLAB. Please complete by
 % the second class. Answer questions in comments and return assignment via
 % github
 %% numbers vs strings
@@ -78,6 +80,10 @@ a == b
 %This does not give an error because it is simply a number and not a
 %matrix. The operation involves identifying whether 2 is present in the a
 %array.
+%AW: this is mostly correct, but not precise. Matlab considers b a 1x1 matrix. It 
+%isn't just checking whether 2 is present in the array but checks whether each entry in the
+%array is equal to 2. -0.01.
+
 %%  : operator 
 %(hint for the following type "help colon" at the command line to see
 % how the ":" operator works
@@ -101,7 +107,11 @@ oneToTen = 1:10;
 
 %2:+2:20
 %oneToTen+1:+2:20
-
+%AW: the above statment with oneToTen does work - it actually took me a while to figure out why. if you define a varaible
+% as an array and then use it with the colon operator as you did here, MATLAB only uses the first entry. so while your answer is 
+%technically correct, it basiclaly only uses the first entry (1) from the oneToTen array. Better would be 2*oneToTen - it gives
+%the same answer. I will give full credit since it works, but make sure you understand this point. Same logic for the other
+%parts of this questions. 
 
 % 2. odd numbers from one to nineteen
 
